@@ -122,6 +122,14 @@ Deployed using **GitHub Pages**.
 
 ---
 
+## ⚡ Features
+
+- Responsive hero section with profile picture
+- Projects and certifications displayed in cards
+- Modal view for certificate images
+- Social media links with hover effects
+- Simple, dark-themed design with accent color
+
 ## 📄 License
 
 This project is open-source and available under the MIT License.
@@ -131,3 +139,8 @@ This project is open-source and available under the MIT License.
 ### 💡 Note
 
 This portfolio is continuously updated as I learn and build new DevOps projects.
+
+
+## Author
+
+**Sagar Awasthi** – [LinkedIn](https://www.linkedin.com/in/sagar-awasthi-it-services) | [GitHub](https://github.com/coder-ocean)
