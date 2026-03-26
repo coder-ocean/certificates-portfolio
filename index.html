@@ -4,11 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Sagar Awasthi | DevOps Engineer</title>
 
+  <!-- SEO -->
   <meta name="description" content="DevOps Engineer specializing in AWS, Kubernetes, and CI/CD automation.">
 
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Typed -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
   <style>
@@ -21,7 +26,7 @@
 
     body {
       margin: 0;
-      font-family: system-ui;
+      font-family: system-ui, -apple-system, sans-serif;
       background: var(--bg);
       color: var(--text);
     }
@@ -53,24 +58,37 @@
 
     .hero-text h1 {
       font-size: 3rem;
+      margin-bottom: 5px;
+    }
+
+    .typing {
+      color: var(--accent);
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero-desc {
+      max-width: 520px;
+      line-height: 1.7;
+      color: #cbd5f5;
     }
 
     .hero-buttons a {
       display: inline-block;
-      margin: 10px 10px 0 0;
-      padding: 10px 16px;
+      margin: 12px 10px 0 0;
+      padding: 10px 18px;
       background: var(--accent);
-      color: black;
+      color: #020617;
       border-radius: 6px;
-      text-decoration: none;
       font-weight: 600;
+      text-decoration: none;
     }
 
     .hero-image img {
-      width: 220px;
-      height: 220px;
+      width: 240px;
+      height: 240px;
       border-radius: 50%;
-      border: 3px solid var(--accent);
+      border: 4px solid var(--accent);
     }
 
     /* CARDS */
@@ -78,79 +96,37 @@
       background: var(--card);
       padding: 20px;
       border-radius: 10px;
-      margin: 20px 0;
-    }
-
-    /* CERTIFICATES */
-    .cert-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .cert-card img {
-      width: 100%;
-      border-radius: 8px;
-      cursor: pointer;
+      margin-bottom: 20px;
       transition: 0.3s;
     }
 
-    .cert-card img:hover {
-      transform: scale(1.05);
+    .card:hover {
+      transform: translateY(-5px);
     }
 
-    /* MODAL */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      padding-top: 60px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.9);
+    .impact {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      margin-top: 10px;
     }
 
-    .modal img {
-      display: block;
-      margin: auto;
-      max-width: 90%;
-      max-height: 80%;
-    }
-
-    .close {
-      position: absolute;
-      top: 20px;
-      right: 35px;
-      font-size: 40px;
-      color: white;
-      cursor: pointer;
+    /* SKILLS */
+    .skills span {
+      display: inline-block;
+      margin: 6px;
+      padding: 6px 10px;
+      background: #334155;
+      border-radius: 6px;
+      font-size: 0.85rem;
     }
 
     /* ICONS */
-    .socials {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .socials a {
-      width: 55px;
-      height: 55px;
-      background: var(--card);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
+    .icon-link {
+      margin: 10px;
       font-size: 22px;
-      color: var(--text);
-      transition: 0.3s;
-    }
-
-    .socials a:hover {
-      background: var(--accent);
-      color: black;
+      padding: 10px;
+      background: var(--card);
+      border-radius: 50%;
     }
 
     @media(max-width:768px) {
@@ -170,11 +146,16 @@
 
       <div class="hero-text">
         <h1>Sagar Awasthi</h1>
-        <p>DevOps Engineer | AWS • Kubernetes • CI/CD</p>
+
+        <div class="typing"><span id="typed"></span></div>
+
+        <p class="hero-desc">
+          DevOps Engineer focused on building reliable, scalable cloud infrastructure using AWS and Kubernetes.
+          Experienced in designing CI/CD pipelines, automating deployments, and improving system efficiency.
+        </p>
 
         <div class="hero-buttons">
-          <a href="./resume.pdf" target="_blank">View Resume</a>
-          <a href="./resume.pdf" download>Download Resume</a>
+          <a href="resume.pdf" download>Resume</a>
           <a href="https://github.com/coder-ocean" target="_blank">GitHub</a>
           <a href="https://www.linkedin.com/in/sagar-awasthi-it-services" target="_blank">LinkedIn</a>
         </div>
@@ -187,88 +168,103 @@
     </div>
   </header>
 
+  <!-- SKILLS -->
+  <section>
+    <h2>⚙️ Core Skills</h2>
+
+    <div class="skills">
+      <span>AWS (EC2, IAM, S3)</span>
+      <span>Kubernetes</span>
+      <span>Docker</span>
+      <span>CI/CD (GitHub Actions)</span>
+      <span>Linux</span>
+      <span>Networking</span>
+      <span>Bash Scripting</span>
+    </div>
+  </section>
+
   <!-- PROJECTS -->
   <section>
-    <h2>🚀 Projects</h2>
+    <h2>🚀 Selected Work</h2>
 
     <div class="card">
-      <h3>CI/CD Pipeline</h3>
-      <a href="https://github.com/coder-ocean/ares-cicd">View Code →</a>
+      <h3>CI/CD Pipeline Automation</h3>
+      <p>Designed and implemented CI/CD pipelines using GitHub Actions.</p>
+
+      <div class="impact">
+        → Reduced manual deployment effort and improved release consistency
+      </div>
+
+      <a href="https://github.com/coder-ocean/ares-cicd" target="_blank">View Code →</a>
     </div>
 
     <div class="card">
-      <h3>Multi EC2 Deployment</h3>
-      <a href="https://github.com/coder-ocean/flask-express-2ec2-app">View Code →</a>
+      <h3>AWS EC2 Application Deployment</h3>
+      <p>Deployed and managed Flask applications on EC2 instances.</p>
+
+      <div class="impact">
+        → Enabled scalable cloud hosting and real-world deployment setup
+      </div>
+
+      <a href="https://github.com/coder-ocean/flask-express-ec2-app" target="_blank">View Code →</a>
     </div>
 
     <div class="card">
-      <h3>AWS EC2 App</h3>
-      <a href="https://github.com/coder-ocean/flask-express-ec2-app">View Code →</a>
-    </div>
+      <h3>Kubernetes-Based Deployment</h3>
+      <p>Containerized application and deployed using Kubernetes.</p>
 
-    <div class="card">
-      <h3>Kubernetes Deployment</h3>
-      <a href="https://github.com/coder-ocean/K8s-app">View Code →</a>
+      <div class="impact">
+        → Improved scalability and service reliability using orchestration
+      </div>
+
+      <a href="https://github.com/coder-ocean/K8s-app" target="_blank">View Code →</a>
     </div>
 
   </section>
 
-  <!-- CERTIFICATES -->
+  <!-- GITHUB -->
   <section>
-    <h2>📜 Certifications</h2>
-
-    <div class="cert-grid">
-
-      <div class="cert-card">
-        <img src="images/certificate_TD-SAGA-DO-2306_page-0001.jpg" onclick="openModal(this.src)">
-      </div>
-
-      <div class="cert-card">
-        <img src="images/DFS-Support_Administrator Beginner -GEN AI L2_page-0001.jpg" onclick="openModal(this.src)">
-      </div>
-
-      <div class="cert-card">
-        <img src="images/0a33b120-c5e3-4a9a-acba-f60cab91a079_page-0001.jpg" onclick="openModal(this.src)">
-      </div>
-
-    </div>
+    <h2>📊 GitHub Activity</h2>
+    <img src="https://github-readme-stats.vercel.app/api?username=coder-ocean&show_icons=true&theme=tokyonight">
   </section>
-
-  <!-- MODAL -->
-  <div id="imgModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img id="modalImg">
-  </div>
 
   <!-- CONTACT -->
   <section>
     <h2>📬 Contact</h2>
-    <form action="https://formspree.io/f/mzdkzrzk" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
+
+    <p>Open to DevOps / Cloud Engineering roles.</p>
+
+    <form action="https://formspree.io/f/YOUR_ID" method="POST">
       <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
+      <textarea name="message" placeholder="Message"></textarea>
+      <button type="submit">Send</button>
     </form>
   </section>
 
-  <!-- SOCIAL -->
-  <section>
-    <div class="socials">
-      <a href="https://github.com/coder-ocean"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/sagar-awasthi-it-services"><i class="fab fa-linkedin-in"></i></a>
-    </div>
+  <!-- CONNECT -->
+  <section style="text-align:center;">
+    <a href="https://github.com/coder-ocean" target="_blank" class="icon-link">
+      <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/sagar-awasthi-it-services" target="_blank" class="icon-link">
+      <i class="fab fa-linkedin"></i>
+    </a>
   </section>
 
   <!-- SCRIPT -->
   <script>
-    function openModal(src) {
-      document.getElementById("imgModal").style.display = "block";
-      document.getElementById("modalImg").src = src;
-    }
-
-    function closeModal() {
-      document.getElementById("imgModal").style.display = "none";
-    }
+    new Typed("#typed", {
+      strings: [
+        "DevOps Engineer",
+        "AWS & Kubernetes",
+        "CI/CD Automation",
+        "Cloud Infrastructure"
+      ],
+      typeSpeed: 50,
+      backSpeed: 25,
+      loop: true
+    });
   </script>
 
 </body>
