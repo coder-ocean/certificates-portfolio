@@ -25,8 +25,7 @@ I enjoy automating deployments, improving system efficiency, and working with mo
 - 🔥 Clean, professional UI (FAANG-level design)
 - ⚡ Fully responsive (mobile-friendly)
 - 🎯 Impact-focused project showcase
-- 📊 Live GitHub stats integration
-- ⌨️ Animated typing effect (Typed.js)
+- 📊 GitHub profile integration
 - 📄 Resume download support
 - 📬 Contact form (Formspree integration)
 
@@ -43,10 +42,17 @@ I enjoy automating deployments, improving system efficiency, and working with mo
 
 ---
 
-### 🔹 AWS EC2 Deployment  
+### 🔹 Multi EC2 Deployment Architecture  
+- Distributed deployment across multiple AWS EC2 instances  
+- Designed for better availability and scalability  
+
+👉 https://github.com/coder-ocean/flask-express-2ec2-app  
+
+---
+
+### 🔹 AWS EC2 Application Deployment  
 - Deployed Flask app on AWS EC2  
 - Configured server & networking  
-- Enabled scalable cloud hosting  
 
 👉 https://github.com/coder-ocean/flask-express-ec2-app  
 
@@ -55,7 +61,6 @@ I enjoy automating deployments, improving system efficiency, and working with mo
 ### 🔹 Kubernetes Deployment  
 - Containerized application using Docker  
 - Deployed with Kubernetes orchestration  
-- Improved scalability & reliability  
 
 👉 https://github.com/coder-ocean/K8s-app  
 
@@ -65,7 +70,6 @@ I enjoy automating deployments, improving system efficiency, and working with mo
 
 - HTML5, CSS3
 - JavaScript
-- Typed.js
 - Font Awesome
 - GitHub Pages (Hosting)
 
@@ -85,7 +89,7 @@ I enjoy automating deployments, improving system efficiency, and working with mo
 
 ## 📬 Contact
 
-- 📧 Email: your-email@gmail.com  
+- 📧 Email: sagarawasthi.hiet@gmail.com  
 - 🔗 LinkedIn: https://www.linkedin.com/in/sagar-awasthi-it-services  
 - 💻 GitHub: https://github.com/coder-ocean  
 
