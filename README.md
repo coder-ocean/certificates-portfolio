@@ -48,7 +48,7 @@ This portfolio is built to showcase:
 ## 🔗 Connect
 
 - GitHub: https://github.com/coder-ocean  
-- LinkedIn: (https://github.com/coder-ocean)
+- LinkedIn: (https://www.linkedin.com/in/sagar-awasthi-it-services)
 
 ---
 
