@@ -129,13 +129,17 @@
       border-radius: 50%;
     }
 
-    form {
+    .contact-form {
       max-width: 500px;
       margin-top: 20px;
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 10px;
+      box-sizing: border-box;
     }
 
-    form input,
-    form textarea {
+    .contact-form input,
+    .contact-form textarea {
       width: 100%;
       padding: 12px;
       margin: 10px 0;
@@ -145,14 +149,20 @@
       background: #334155;
       color: white;
       font-size: 14px;
+      box-sizing: border-box;
+      /* 🔥 FIXES OVERFLOW */
     }
 
-    form input::placeholder,
-    form textarea::placeholder {
+    .contact-form textarea {
+      resize: vertical;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
       color: #94a3b8;
     }
 
-    form button {
+    .contact-form button {
       width: 100%;
       padding: 12px;
       border: none;
@@ -164,14 +174,13 @@
       transition: 0.3s;
     }
 
-    form button:hover {
+    .contact-form button:hover {
       background: #0ea5e9;
     }
 
-    form {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 10px;
+    .form-note {
+      font-size: 0.9rem;
+      color: #94a3b8;
     }
 
     @media(max-width:768px) {
@@ -291,14 +300,23 @@
   <section>
     <h2>📊 GitHub Activity</h2>
 
-    <!-- Stats -->
-    <img
-      src="https://github-readme-stats.vercel.app/api?username=coder-ocean&show_icons=true&theme=tokyonight&cache_seconds=86400"
-      style="width:100%; max-width:500px; margin-bottom:20px;">
+    <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
 
-    <!-- Streak -->
-    <img src="https://streak-stats.demolab.com?user=coder-ocean&theme=tokyonight" style="width:100%; max-width:500px;">
-    <img src="https://ghchart.rshah.org/coder-ocean">
+      <!-- Stats -->
+      <img
+        src="https://github-readme-stats.vercel.app/api?username=coder-ocean&show_icons=true&theme=tokyonight&cache_seconds=86400"
+        style="width:100%; max-width:480px; border-radius:10px;" onerror="this.style.display='none'">
+
+      <!-- Streak -->
+      <img src="https://streak-stats.demolab.com?user=coder-ocean&theme=tokyonight"
+        style="width:100%; max-width:480px; border-radius:10px;" onerror="this.style.display='none'">
+
+    </div>
+
+    <!-- Fallback (ALWAYS WORKS) -->
+    <div style="margin-top:20px; text-align:center;">
+      <img src="https://ghchart.rshah.org/coder-ocean" style="width:100%; max-width:700px; border-radius:10px;">
+    </div>
 
   </section>
   <!-- CONTACT -->
@@ -307,7 +325,7 @@
 
     <p>Open to DevOps / Cloud Engineering roles.</p>
 
-    <form action="https://formspree.io/f/mzdkzrzk" method="POST">
+    <form action="https://formspree.io/f/mzdkzrzk" method="POST" class="contact-form">
 
       <input type="text" name="name" placeholder="Your Name" required>
 
@@ -318,9 +336,8 @@
       <button type="submit">Send Message</button>
 
     </form>
-    <p style="font-size:0.9rem; color:#94a3b8;">
-      I'll get back to you within 24 hours.
-    </p>
+
+    <p class="form-note">I'll get back to you within 24 hours.</p>
   </section>
 
   <!-- CONNECT -->
