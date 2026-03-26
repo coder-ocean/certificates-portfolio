@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevOps Portfolio</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    scroll-behavior: smooth;
+  }
+
+  header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #020617, #1e293b);
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .card {
+    background: #1e293b;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .card.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  }
+
+  a {
+    color: #38bdf8;
+    text-decoration: none;
+  }
+
+  img {
+    width: 100%;
+    max-width: 650px;
+    border-radius: 10px;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  h2 {
+    border-left: 5px solid #38bdf8;
+    padding-left: 10px;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>DevOps Portfolio</h1>
+  <p>Projects • Certifications • Learning Journey</p>
+</header>
+
+<section>
+  <h2>🚀 Projects</h2>
+
+  <div class="card">
+    <h3>CI/CD Pipeline</h3>
+    <p>Automated workflows using GitHub Actions.</p>
+    <a href="https://github.com/coder-ocean/ares-cicd">View Project</a>
+  </div>
+
+  <div class="card">
+    <h3>Flask App on EC2</h3>
+    <p>Deployed Flask application on AWS EC2.</p>
+    <a href="https://github.com/coder-ocean/flask-express-ec2-app">View Project</a>
+  </div>
+
+  <div class="card">
+    <h3>Multi EC2 Deployment</h3>
+    <p>Distributed deployment across multiple EC2 instances.</p>
+    <a href="https://github.com/coder-ocean/flask-express-2ec2-app">View Project</a>
+  </div>
+
+  <div class="card">
+    <h3>Kubernetes Deployment</h3>
+    <p>Container orchestration using Kubernetes.</p>
+    <a href="https://github.com/coder-ocean/K8s-app">View Project</a>
+  </div>
+</section>
+
+<section>
+  <h2>📜 DevOps Certifications</h2>
+
+  <div class="card center">
+    <h3>DevOps - Tutedude</h3>
+    <a href="pdfs/certificate_TD-SAGA-DO-2306.pdf">
+      <img src="images/certificate_TD-SAGA-DO-2306_page-0001.jpg">
+    </a>
+  </div>
+</section>
+
+<section>
+  <h2>🤖 AI Certification</h2>
+
+  <div class="card center">
+    <h3>Gen AI L2 - HCLTech</h3>
+    <a href="pdfs/DFS-Support_Administrator Beginner -GEN AI L2.pdf">
+      <img src="images/DFS-Support_Administrator Beginner -GEN AI L2_page-0001.jpg">
+    </a>
+  </div>
+</section>
+
+<section>
+  <h2>⚡ Chaos Engineering Certification</h2>
+
+  <div class="card center">
+    <h3>Gremlin Enterprise Chaos Engineering Certified (GECEC)</h3>
+    <a href="pdfs/0a33b120-c5e3-4a9a-acba-f60cab91a079.pdf">
+      <img src="images/0a33b120-c5e3-4a9a-acba-f60cab91a079_page-0001.jpg">
+    </a>
+  </div>
+</section>
+
+<section>
+  <h2>📈 Currently Learning</h2>
+  <p>Terraform • Advanced Kubernetes • Cloud Architecture</p>
+</section>
+
+<section class="center">
+  <h2>🔗 Connect</h2>
+  <p>
+    <a href="https://github.com/coder-ocean">GitHub</a> |
+    <a href="#">LinkedIn</a>
+  </p>
+</section>
+
+<script>
+  const cards = document.querySelectorAll('.card');
+
+  window.addEventListener('scroll', () => {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    cards.forEach(card => {
+      const cardTop = card.getBoundingClientRect().top;
+
+      if(cardTop < triggerBottom){
+        card.classList.add('show');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
