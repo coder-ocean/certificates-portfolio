@@ -1,57 +1,129 @@
-# 🌐 DevOps Portfolio
+# 🚀 DevOps Portfolio – Sagar Awasthi
 
-This repository contains my personal portfolio website showcasing my projects and certifications in DevOps, Cloud, and emerging technologies.
+A modern, responsive **DevOps portfolio website** showcasing my experience in cloud infrastructure, CI/CD pipelines, and container orchestration.
 
----
-
-## 🚀 Live Portfolio
-
-🔗 https://coder-ocean.github.io/certificates-portfolio/
+🔗 **Live Portfolio:**  
+https://coder-ocean.github.io/certificates-portfolio/
 
 ---
 
-## 💻 Projects Featured
+## 👨‍💻 About Me
 
-- CI/CD Pipeline using GitHub Actions  
-- Flask Application Deployment on AWS EC2  
-- Multi-Instance EC2 Deployment  
-- Kubernetes Application Deployment  
+DevOps Engineer focused on building **scalable, reliable cloud systems** using:
 
----
+- ☁️ AWS (EC2, IAM, S3)
+- ⚙️ CI/CD Pipelines (GitHub Actions)
+- 🐳 Docker & Kubernetes
+- 🐧 Linux & Networking
 
-## 📜 Certifications Included
-
-- DevOps Certification (Tutedude)  
-- Generative AI L2 (HCLTech)  
-- Gremlin Enterprise Chaos Engineering Certified (GECEC)  
+I enjoy automating deployments, improving system efficiency, and working with modern DevOps tools.
 
 ---
 
-## 🛠 Tech Used
+## ⚙️ Features
 
-- HTML5  
-- CSS3  
-- JavaScript  
-- GitHub Pages  
-
----
-
-## 📌 Purpose
-
-This portfolio is built to showcase:
-- Hands-on DevOps projects  
-- Certification proofs  
-- Continuous learning journey  
+- 🔥 Clean, professional UI (FAANG-level design)
+- ⚡ Fully responsive (mobile-friendly)
+- 🎯 Impact-focused project showcase
+- 📊 Live GitHub stats integration
+- ⌨️ Animated typing effect (Typed.js)
+- 📄 Resume download support
+- 📬 Contact form (Formspree integration)
 
 ---
 
-## 🔗 Connect
+## 🚀 Featured Projects
 
-- GitHub: https://github.com/coder-ocean  
-- LinkedIn: (https://www.linkedin.com/in/sagar-awasthi-it-services)
+### 🔹 CI/CD Pipeline Automation  
+- Built using GitHub Actions  
+- Automated build & deployment workflows  
+- Improved deployment consistency  
+
+👉 https://github.com/coder-ocean/ares-cicd  
 
 ---
 
-## ⚡ Note
+### 🔹 AWS EC2 Deployment  
+- Deployed Flask app on AWS EC2  
+- Configured server & networking  
+- Enabled scalable cloud hosting  
 
-All certificates are included as images and PDFs for verification.
+👉 https://github.com/coder-ocean/flask-express-ec2-app  
+
+---
+
+### 🔹 Kubernetes Deployment  
+- Containerized application using Docker  
+- Deployed with Kubernetes orchestration  
+- Improved scalability & reliability  
+
+👉 https://github.com/coder-ocean/K8s-app  
+
+---
+
+## 🛠️ Tech Stack
+
+- HTML5, CSS3
+- JavaScript
+- Typed.js
+- Font Awesome
+- GitHub Pages (Hosting)
+
+---
+
+## 📂 Project Structure
+
+```
+.
+├── index.html
+├── resume.pdf
+├── images/
+│   └── profile_pic.jpg
+```
+
+---
+
+## 📬 Contact
+
+- 📧 Email: your-email@gmail.com  
+- 🔗 LinkedIn: https://www.linkedin.com/in/sagar-awasthi-it-services  
+- 💻 GitHub: https://github.com/coder-ocean  
+
+---
+
+## 🚀 Getting Started
+
+### Run locally:
+
+```bash
+git clone https://github.com/coder-ocean/certificates-portfolio.git
+cd certificates-portfolio
+open index.html
+```
+
+---
+
+## 📌 Deployment
+
+Deployed using **GitHub Pages**.
+
+---
+
+## ⭐ Highlights
+
+- Real-world DevOps projects  
+- Production-style portfolio  
+- Recruiter-focused presentation  
+- Clean and minimal design  
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
+
+---
+
+### 💡 Note
+
+This portfolio is continuously updated as I learn and build new DevOps projects.

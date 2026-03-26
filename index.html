@@ -4,210 +4,266 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sagar Awasthi | DevOps Engineer</title>
+
+  <!-- SEO -->
+  <meta name="description" content="DevOps Engineer specializing in AWS, Kubernetes, and CI/CD automation.">
+
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <title>DevOps Portfolio</title>
+
+  <!-- Typed -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
   <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #e2e8f0;
+      --accent: #38bdf8;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-      scroll-behavior: smooth;
-    }
-
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #020617, #1e293b);
-    }
-
-    h1 {
-      font-size: 2.8rem;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
 
     section {
-      padding: 50px 20px;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
-    }
-
-    .card {
-      background: #1e293b;
-      margin: 20px 0;
-      padding: 20px;
-      border-radius: 12px;
-      transition: 0.3s;
-      opacity: 0;
-      transform: translateY(40px);
-    }
-
-    .card.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    }
-
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-
-    img {
-      width: 100%;
-      max-width: 650px;
-      border-radius: 10px;
-    }
-
-    .icon-link {
-      margin: 0 15px;
-      font-size: 30px;
-      color: #e2e8f0;
-      transition: 0.3s;
-    }
-
-    .icon-link:hover {
-      color: #38bdf8;
-      transform: scale(1.2);
-    }
-
-    a img:hover {
-      transform: scale(1.2);
-    }
-
-    .center {
-      text-align: center;
+      padding: 60px 20px;
     }
 
     h2 {
-      border-left: 5px solid #38bdf8;
+      border-left: 4px solid var(--accent);
       padding-left: 10px;
+      margin-bottom: 25px;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 90px 20px;
+      background: linear-gradient(135deg, #020617, #1e293b);
+    }
+
+    .hero-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 5px;
+    }
+
+    .typing {
+      color: var(--accent);
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero-desc {
+      max-width: 520px;
+      line-height: 1.7;
+      color: #cbd5f5;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      margin: 12px 10px 0 0;
+      padding: 10px 18px;
+      background: var(--accent);
+      color: #020617;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .hero-image img {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      border: 4px solid var(--accent);
+    }
+
+    /* CARDS */
+    .card {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .impact {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      margin-top: 10px;
+    }
+
+    /* SKILLS */
+    .skills span {
+      display: inline-block;
+      margin: 6px;
+      padding: 6px 10px;
+      background: #334155;
+      border-radius: 6px;
+      font-size: 0.85rem;
+    }
+
+    /* ICONS */
+    .icon-link {
+      margin: 10px;
+      font-size: 22px;
+      padding: 10px;
+      background: var(--card);
+      border-radius: 50%;
+    }
+
+    @media(max-width:768px) {
+      .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header style="text-align:center; padding:60px 20px; background:linear-gradient(135deg,#020617,#1e293b);">
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-container">
 
-    <img src="images/profile_pic.jpg" alt="Profile Photo" style="width:130px; height:130px; object-fit:cover; border-radius:50%;
-     border:3px solid #38bdf8; box-shadow:0 0 20px rgba(56,189,248,0.6);
-     margin-bottom:15px;">
+      <div class="hero-text">
+        <h1>Sagar Awasthi</h1>
 
-    <h1 style="margin:10px 0;">Sagar Awasthi</h1>
+        <div class="typing"><span id="typed"></span></div>
 
-    <h3 style="color:#38bdf8; margin-top:5px;">DevOps Enthusiast</h3>
+        <p class="hero-desc">
+          DevOps Engineer focused on building reliable, scalable cloud infrastructure using AWS and Kubernetes.
+          Experienced in designing CI/CD pipelines, automating deployments, and improving system efficiency.
+        </p>
 
-    <p style="max-width:600px; margin:auto; margin-top:15px; line-height:1.6;">
-      DevOps enthusiast with hands-on experience in CI/CD pipelines, AWS deployments, and Kubernetes-based applications.
-      Passionate about automation, cloud infrastructure, and continuous learning.
-    </p>
+        <div class="hero-buttons">
+          <a href="resume.pdf" download>Resume</a>
+          <a href="https://github.com/coder-ocean" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/sagar-awasthi-it-services" target="_blank">LinkedIn</a>
+        </div>
+      </div>
 
+      <div class="hero-image">
+        <img src="images/profile_pic.jpg">
+      </div>
+
+    </div>
   </header>
 
+  <!-- SKILLS -->
   <section>
-    <h2>🚀 Projects</h2>
+    <h2>⚙️ Core Skills</h2>
+
+    <div class="skills">
+      <span>AWS (EC2, IAM, S3)</span>
+      <span>Kubernetes</span>
+      <span>Docker</span>
+      <span>CI/CD (GitHub Actions)</span>
+      <span>Linux</span>
+      <span>Networking</span>
+      <span>Bash Scripting</span>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <h2>🚀 Selected Work</h2>
 
     <div class="card">
-      <h3>CI/CD Pipeline</h3>
-      <p>Automated workflows using GitHub Actions.</p>
-      <a href="https://github.com/coder-ocean/ares-cicd">View Project</a>
+      <h3>CI/CD Pipeline Automation</h3>
+      <p>Designed and implemented CI/CD pipelines using GitHub Actions.</p>
+
+      <div class="impact">
+        → Reduced manual deployment effort and improved release consistency
+      </div>
+
+      <a href="https://github.com/coder-ocean/ares-cicd" target="_blank">View Code →</a>
     </div>
 
     <div class="card">
-      <h3>Flask App on EC2</h3>
-      <p>Deployed Flask application on AWS EC2.</p>
-      <a href="https://github.com/coder-ocean/flask-express-ec2-app">View Project</a>
+      <h3>AWS EC2 Application Deployment</h3>
+      <p>Deployed and managed Flask applications on EC2 instances.</p>
+
+      <div class="impact">
+        → Enabled scalable cloud hosting and real-world deployment setup
+      </div>
+
+      <a href="https://github.com/coder-ocean/flask-express-ec2-app" target="_blank">View Code →</a>
     </div>
 
     <div class="card">
-      <h3>Multi EC2 Deployment</h3>
-      <p>Distributed deployment across multiple EC2 instances.</p>
-      <a href="https://github.com/coder-ocean/flask-express-2ec2-app">View Project</a>
+      <h3>Kubernetes-Based Deployment</h3>
+      <p>Containerized application and deployed using Kubernetes.</p>
+
+      <div class="impact">
+        → Improved scalability and service reliability using orchestration
+      </div>
+
+      <a href="https://github.com/coder-ocean/K8s-app" target="_blank">View Code →</a>
     </div>
 
-    <div class="card">
-      <h3>Kubernetes Deployment</h3>
-      <p>Container orchestration using Kubernetes.</p>
-      <a href="https://github.com/coder-ocean/K8s-app">View Project</a>
-    </div>
   </section>
 
+  <!-- GITHUB -->
   <section>
-    <h2>📜 DevOps Certifications</h2>
-
-    <div class="card center">
-      <h3>DevOps - Tutedude</h3>
-      <a href="pdfs/certificate_TD-SAGA-DO-2306.pdf">
-        <img src="images/certificate_TD-SAGA-DO-2306_page-0001.jpg">
-      </a>
-    </div>
+    <h2>📊 GitHub Activity</h2>
+    <img src="https://github-readme-stats.vercel.app/api?username=coder-ocean&show_icons=true&theme=tokyonight">
   </section>
 
+  <!-- CONTACT -->
   <section>
-    <h2>🤖 AI Certification</h2>
+    <h2>📬 Contact</h2>
 
-    <div class="card center">
-      <h3>Gen AI L2 - HCLTech</h3>
-      <a href="pdfs/DFS-Support_Administrator Beginner -GEN AI L2.pdf">
-        <img src="images/DFS-Support_Administrator Beginner -GEN AI L2_page-0001.jpg">
-      </a>
-    </div>
+    <p>Open to DevOps / Cloud Engineering roles.</p>
+
+    <form action="https://formspree.io/f/YOUR_ID" method="POST">
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
   </section>
 
-  <section>
-    <h2>⚡ Chaos Engineering Certification</h2>
+  <!-- CONNECT -->
+  <section style="text-align:center;">
+    <a href="https://github.com/coder-ocean" target="_blank" class="icon-link">
+      <i class="fab fa-github"></i>
+    </a>
 
-    <div class="card center">
-      <h3>Gremlin Enterprise Chaos Engineering Certified (GECEC)</h3>
-      <a href="pdfs/0a33b120-c5e3-4a9a-acba-f60cab91a079.pdf">
-        <img src="images/0a33b120-c5e3-4a9a-acba-f60cab91a079_page-0001.jpg">
-      </a>
-    </div>
+    <a href="https://www.linkedin.com/in/sagar-awasthi-it-services" target="_blank" class="icon-link">
+      <i class="fab fa-linkedin"></i>
+    </a>
   </section>
 
-  <section>
-    <h2>📈 Currently Learning</h2>
-    <p>Advanced Kubernetes • Cloud Architecture</p>
-  </section>
-
-  <section style="text-align:center; padding:50px 20px;">
-
-    <h2 style="border:none;">🔗 Connect</h2>
-
-    <div style="margin-top:25px;">
-
-      <!-- GitHub -->
-      <a href="https://github.com/coder-ocean" target="_blank" class="icon-link">
-        <i class="fab fa-github"></i>
-      </a>
-
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/sagar-awasthi-it-services" target="_blank" class="icon-link">
-        <i class="fab fa-linkedin"></i>
-      </a>
-
-    </div>
-
-  </section>
-
+  <!-- SCRIPT -->
   <script>
-    const cards = document.querySelectorAll('.card');
-
-    window.addEventListener('scroll', () => {
-      const triggerBottom = window.innerHeight * 0.85;
-
-      cards.forEach(card => {
-        const cardTop = card.getBoundingClientRect().top;
-
-        if (cardTop < triggerBottom) {
-          card.classList.add('show');
-        }
-      });
+    new Typed("#typed", {
+      strings: [
+        "DevOps Engineer",
+        "AWS & Kubernetes",
+        "CI/CD Automation",
+        "Cloud Infrastructure"
+      ],
+      typeSpeed: 50,
+      backSpeed: 25,
+      loop: true
     });
   </script>
 
