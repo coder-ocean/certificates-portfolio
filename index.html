@@ -228,6 +228,25 @@
         }
     </style>
 </head>
+<div id="toast" style="
+position: fixed;
+bottom: 30px;
+right: 30px;
+background: rgba(30,41,59,0.95);
+color: #e2e8f0;
+padding: 14px 18px;
+border-radius: 8px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+font-size: 0.9rem;
+opacity: 0;
+transform: translateY(20px);
+transition: 0.4s ease;
+z-index: 9999;
+max-width: 280px;
+">
+    ✅ Thanks for reaching out. Your message has been successfully submitted.<br>
+    I will get back to you within 24–48 hours.
+</div>
 
 <body>
 
@@ -326,18 +345,6 @@
                 <button type="submit" id="submit-btn">
                     <span id="btn-text">Send</span>
                 </button>
-
-                <p id="form-message" style="
-                display:none;
-                margin-top:12px;
-                color:#38bdf8;
-                font-size:0.9rem;
-                opacity:0;
-                transition:0.4s ease;
-                ">
-                    Thanks for reaching out. Your message has been successfully submitted.<br>
-                    I will get back to you within 24–48 hours.
-                </p>
             </form>
         </div>
 
@@ -383,9 +390,9 @@
     <script>
         // Form Submission
         const form = document.getElementById("contact-form");
-        const message = document.getElementById("form-message");
         const btn = document.getElementById("submit-btn");
         const btnText = document.getElementById("btn-text");
+        const toast = document.getElementById("toast");
 
         form.addEventListener("submit", async function (e) {
             e.preventDefault();
@@ -404,13 +411,17 @@
             if (response.ok) {
                 form.reset();
 
-                // show message with fade-in
-                message.style.display = "block";
-                setTimeout(() => {
-                    message.style.opacity = "1";
-                }, 50);
+                // show toast
+                toast.style.opacity = "1";
+                toast.style.transform = "translateY(0)";
 
-                // reset button
+                // auto hide
+                setTimeout(() => {
+                    toast.style.opacity = "0";
+                    toast.style.transform = "translateY(20px)";
+                }, 4000);
+
+                // button animation
                 btnText.innerText = "Sent ✓";
 
                 setTimeout(() => {
