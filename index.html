@@ -94,15 +94,46 @@ h2 {
     gap: 20px;
 }
 
-.cert-grid img {
+.cert-card {
+    text-align: center;
+}
+
+.cert-card img {
     width: 100%;
     border-radius: 10px;
+    cursor: pointer;
     transition: 0.25s ease;
 }
 
-.cert-grid img:hover {
+.cert-card img:hover {
     transform: scale(1.03);
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.cert-title {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #cbd5f5;
+}
+
+/* FULLSCREEN MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
 }
 
 /* GITHUB */
@@ -131,7 +162,6 @@ form {
     background: var(--card);
     padding: 18px;
     border-radius: 10px;
-    box-sizing: border-box;
 }
 
 form input, form textarea {
@@ -205,8 +235,33 @@ form button:hover {
     </div>
 </header>
 
+<!-- CERTIFICATIONS (MOVED UP) -->
 <section>
-<h2>🚀 Selected Work</h2>
+<h2>🎓 Certifications</h2>
+
+<div class="cert-grid">
+
+<div class="cert-card">
+<img src="images/certificate_TD-SAGA-DO-2306_page-0001.jpg" onclick="openModal(this.src)">
+<div class="cert-title">DevOps Certification</div>
+</div>
+
+<div class="cert-card">
+<img src="images/DFS-Support_Administrator Beginner -GEN AI L2_page-0001.jpg" onclick="openModal(this.src)">
+<div class="cert-title">Gen AI Support Administrator</div>
+</div>
+
+<div class="cert-card">
+<img src="images/0a33b120-c5e3-4a9a-acba-f60cab91a079_page-0001.jpg" onclick="openModal(this.src)">
+<div class="cert-title">Professional Certification</div>
+</div>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+<h2>🚀 Projects</h2>
 
 <div class="card">
     <h3>CI/CD Pipeline</h3>
@@ -226,18 +281,6 @@ form button:hover {
 <div class="card">
     <h3>Kubernetes Deployment</h3>
     <a href="https://github.com/coder-ocean/K8s-app" target="_blank">View Code →</a>
-</div>
-
-</section>
-
-<!-- CERTIFICATIONS -->
-<section>
-<h2>🎓 Certifications</h2>
-
-<div class="cert-grid">
-    <img src="images/certificate_TD-SAGA-DO-2306_page-0001.jpg" alt="Certificate 1">
-    <img src="images/DFS-Support_Administrator Beginner -GEN AI L2_page-0001.jpg" alt="Certificate 2">
-    <img src="images/0a33b120-c5e3-4a9a-acba-f60cab91a079_page-0001.jpg" alt="Certificate 3">
 </div>
 
 </section>
@@ -274,7 +317,13 @@ form button:hover {
 </div>
 </section>
 
+<!-- MODAL -->
+<div class="modal" id="modal" onclick="closeModal()">
+<img id="modal-img">
+</div>
+
 <script>
+// typing
 const roles=["DevOps Engineer","Cloud Engineer","CI/CD Specialist"];
 let i=0,j=0,del=false;
 function type(){
@@ -286,6 +335,15 @@ if(del&&j===0){del=false;i=(i+1)%roles.length;}
 setTimeout(type,del?50:100);
 }
 type();
+
+// modal
+function openModal(src){
+document.getElementById("modal").style.display="flex";
+document.getElementById("modal-img").src=src;
+}
+function closeModal(){
+document.getElementById("modal").style.display="none";
+}
 </script>
 
 </body>
