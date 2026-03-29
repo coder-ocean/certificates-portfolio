@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sagar Awasthi | DevOps Engineer</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -18,7 +19,7 @@
 
 body {
     margin: 0;
-    font-family: system-ui;
+    font-family: 'Inter', sans-serif;
     background: var(--bg);
     color: var(--text);
 }
@@ -34,7 +35,7 @@ h2 {
     padding-left: 10px;
 }
 
-/* HERO CENTERED */
+/* HERO */
 .hero {
     padding: 80px 20px;
     background: linear-gradient(135deg, #020617, #1e293b);
@@ -73,16 +74,24 @@ h2 {
     margin: 20px 0;
 }
 
-/* GITHUB IMAGES */
-.github-img {
-    width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
-    display: block;
-    border-radius: 10px;
+/* GITHUB FIX */
+.github-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 30px;
 }
 
-/* CONTACT FIX */
+.github-img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* CONTACT */
 .contact-container {
     display: flex;
     justify-content: center;
@@ -123,86 +132,82 @@ form button {
 .socials {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
 }
 
 .socials a {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     background: var(--card);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    color: white;
+    color: var(--text);
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    background: var(--accent);
+    color: black;
+    transform: translateY(-6px) scale(1.1);
+    box-shadow: 0 0 20px var(--accent);
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <header class="hero">
-
     <img src="images/profile_pic.jpg">
-
     <h1>Sagar Awasthi</h1>
     <h2 class="typing"></h2>
-
-    <p>
-        DevOps Engineer with AWS, Kubernetes, and CI/CD experience.
-    </p>
+    <p>DevOps Engineer with AWS, Kubernetes, and CI/CD experience.</p>
 
     <div class="hero-buttons">
         <a href="./resume.pdf" target="_blank">Resume</a>
         <a href="https://github.com/coder-ocean" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/sagar-awasthi-it-services" target="_blank">LinkedIn</a>
     </div>
-
 </header>
 
-<!-- PROJECTS -->
 <section>
 <h2>🚀 Selected Work</h2>
 
 <div class="card">
     <h3>CI/CD Pipeline</h3>
-    <a href="https://github.com/coder-ocean/ares-cicd" target="_blank" rel="noopener">View Code →</a>
+    <a href="https://github.com/coder-ocean/ares-cicd" target="_blank">View Code →</a>
 </div>
 
 <div class="card">
     <h3>Multi EC2 Deployment</h3>
-    <a href="https://github.com/coder-ocean/flask-express-2ec2-app" target="_blank" rel="noopener">View Code →</a>
+    <a href="https://github.com/coder-ocean/flask-express-2ec2-app" target="_blank">View Code →</a>
 </div>
 
 <div class="card">
     <h3>AWS EC2 App</h3>
-    <a href="https://github.com/coder-ocean/flask-express-ec2-app" target="_blank" rel="noopener">View Code →</a>
+    <a href="https://github.com/coder-ocean/flask-express-ec2-app" target="_blank">View Code →</a>
 </div>
 
 <div class="card">
     <h3>Kubernetes Deployment</h3>
-    <a href="https://github.com/coder-ocean/K8s-app" target="_blank" rel="noopener">View Code →</a>
+    <a href="https://github.com/coder-ocean/K8s-app" target="_blank">View Code →</a>
 </div>
 
 </section>
 
-<!-- GITHUB (UPDATED) -->
 <section>
 <h2>📊 GitHub Activity</h2>
 
-<!-- STREAK -->
-<img class="github-img" src="https://streak-stats.demolab.com?user=coder-ocean&theme=tokyonight" />
-
-<!-- ACTIVITY GRAPH -->
-<img class="github-img" src="https://github-readme-activity-graph.vercel.app/graph?username=coder-ocean&theme=tokyo-night" />
-
-<!-- CONTRIBUTIONS -->
-<img class="github-img" src="https://ghchart.rshah.org/38bdf8/coder-ocean" />
+<div class="github-container">
+    <img class="github-img" src="https://streak-stats.demolab.com?user=coder-ocean&theme=tokyonight" />
+    <img class="github-img" src="https://github-readme-activity-graph.vercel.app/graph?username=coder-ocean&theme=tokyo-night" />
+    <img class="github-img" src="https://ghchart.rshah.org/38bdf8/coder-ocean" />
+</div>
 
 </section>
 
-<!-- CONTACT -->
 <section>
 <h2>📬 Contact</h2>
 
@@ -217,7 +222,6 @@ form button {
 
 </section>
 
-<!-- SOCIAL -->
 <section>
 <div class="socials">
 <a href="https://github.com/coder-ocean" target="_blank"><i class="fab fa-github"></i></a>
@@ -226,7 +230,6 @@ form button {
 </section>
 
 <script>
-// typing
 const roles=["DevOps Engineer","Cloud Engineer","CI/CD Specialist"];
 let i=0,j=0,del=false;
 function type(){
