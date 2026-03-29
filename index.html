@@ -275,17 +275,21 @@
             <a href="https://www.linkedin.com/in/sagar-awasthi-it-services" target="_blank">LinkedIn</a>
         </div>
         <button id="theme-toggle" style="
-            margin-top:15px;
-            padding:6px 12px;
-            border-radius:6px;
-            border:none;
-            background:#334155;
-            color:#e2e8f0;
-            cursor:pointer;
-            font-size:0.8rem;
-            transition:0.3s;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            padding: 6px 12px;
+            border-radius: 6px;
+            border: none;
+            background: rgba(30,41,59,0.9);
+            color: #e2e8f0;
+            cursor: pointer;
+            font-size: 0.8rem;
+            backdrop-filter: blur(6px);
+            transition: 0.3s;
             ">
-            🌙 Dark Mode
+            🌙 Dark
         </button>
     </header>
 
@@ -459,16 +463,24 @@
         });
     </script>
     <script>
-        // Toggle Theme
         const toggleBtn = document.getElementById("theme-toggle");
 
+        // Load saved theme
+        if (localStorage.getItem("theme") === "light") {
+            document.documentElement.classList.add("light-mode");
+            toggleBtn.innerText = "☀️ Light";
+        }
+
+        // Toggle theme
         toggleBtn.addEventListener("click", () => {
             document.documentElement.classList.toggle("light-mode");
 
             if (document.documentElement.classList.contains("light-mode")) {
-                toggleBtn.innerText = "☀️ Light Mode";
+                localStorage.setItem("theme", "light");
+                toggleBtn.innerText = "☀️ Light";
             } else {
-                toggleBtn.innerText = "🌙 Dark Mode";
+                localStorage.setItem("theme", "dark");
+                toggleBtn.innerText = "🌙 Dark";
             }
         });
     </script>
