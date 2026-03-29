@@ -2,363 +2,398 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sagar Awasthi | DevOps Engineer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagar Awasthi | DevOps Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<style>
-:root {
-    --bg: #0f172a;
-    --card: rgba(30,41,59,0.7);
-    --text: #e2e8f0;
-    --accent: #38bdf8;
-}
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: rgba(30, 41, 59, 0.7);
+            --text: #e2e8f0;
+            --accent: #38bdf8;
+        }
 
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-}
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
 
-section {
-    max-width: 900px;
-    margin: auto;
-    padding: 50px 20px;
-}
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 50px 20px;
+        }
 
-h2 {
-    border-left: 4px solid var(--accent);
-    padding-left: 10px;
-    font-size: 1.5rem;
-}
+        h2 {
+            border-left: 4px solid var(--accent);
+            padding-left: 10px;
+            font-size: 1.5rem;
+        }
 
-/* HERO */
-.hero {
-    padding: 60px 20px;
-    text-align: center;
-}
+        /* HERO */
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+        }
 
-.hero img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 3px solid var(--accent);
-    box-shadow: 0 0 20px rgba(56,189,248,0.4);
-}
+        .hero img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+        }
 
-.typing {
-    color: var(--accent);
-    height: 25px;
-}
+        .typing {
+            color: var(--accent);
+            height: 25px;
+        }
 
-/* BUTTONS */
-.hero-buttons a {
-    display: inline-block;
-    margin: 8px;
-    padding: 8px 14px;
-    background: var(--accent);
-    color: black;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: 0.25s ease;
-}
+        /* BUTTONS */
+        .hero-buttons a {
+            display: inline-block;
+            margin: 8px;
+            padding: 8px 14px;
+            background: var(--accent);
+            color: black;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.25s ease;
+        }
 
-.hero-buttons a:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(56,189,248,0.3);
-}
+        .hero-buttons a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(56, 189, 248, 0.3);
+        }
 
-/* CARDS */
-.card {
-    background: var(--card);
-    padding: 16px;
-    border-radius: 10px;
-    margin: 15px 0;
-    transition: 0.25s ease;
-}
+        /* CARDS */
+        .card {
+            background: var(--card);
+            padding: 16px;
+            border-radius: 10px;
+            margin: 15px 0;
+            transition: 0.25s ease;
+        }
 
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
 
-/* CERTIFICATIONS */
-.cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
+        /* CERTIFICATIONS */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
 
-.cert-card {
-    text-align: center;
-}
+        .cert-card {
+            text-align: center;
+        }
 
-.cert-card img {
-    width: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.25s ease;
-}
+        .cert-card img {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.25s ease;
+        }
 
-.cert-card img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
+        .cert-card img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
 
-.cert-title {
-    margin-top: 8px;
-    font-size: 0.9rem;
-    color: #cbd5f5;
-}
+        .cert-title {
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #cbd5f5;
+        }
 
-/* MODAL */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    inset: 0;
-    background: rgba(0,0,0,0.9);
-    justify-content: center;
-    align-items: center;
-}
+        /* MODAL */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
 
-.modal img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-}
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
 
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-}
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+        }
 
-/* GITHUB */
-.github-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
+        /* GITHUB */
+        .github-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
 
-.github-img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 8px;
-}
+        .github-img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+        }
 
-/* CONTACT FIX */
-.contact-container {
-    display: flex;
-    justify-content: center;
-}
+        /* CONTACT FIX */
+        .contact-container {
+            display: flex;
+            justify-content: center;
+        }
 
-form {
-    width: 100%;
-    max-width: 450px;
-    background: var(--card);
-    padding: 20px;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
+        form {
+            width: 100%;
+            max-width: 450px;
+            background: var(--card);
+            padding: 20px;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
 
-form input, form textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 6px;
-    border: none;
-    background: #334155;
-    color: white;
-    box-sizing: border-box;
-}
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: none;
+            background: #334155;
+            color: white;
+            box-sizing: border-box;
+        }
 
-form button {
-    width: 100%;
-    padding: 12px;
-    background: var(--accent);
-    border: none;
-    border-radius: 6px;
-    color: black;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.25s ease;
-}
+        form button {
+            width: 100%;
+            padding: 12px;
+            background: var(--accent);
+            border: none;
+            border-radius: 6px;
+            color: black;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.25s ease;
+        }
 
-form button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(56,189,248,0.35);
-}
+        form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(56, 189, 248, 0.35);
+        }
 
-/* SOCIAL */
-.socials {
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-}
+        /* SOCIAL */
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+        }
 
-.socials a {
-    width: 48px;
-    height: 48px;
-    background: var(--card);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    color: var(--text);
-    font-size: 20px;
-    transition: 0.25s ease;
-}
+        .socials a {
+            width: 48px;
+            height: 48px;
+            background: var(--card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: var(--text);
+            font-size: 20px;
+            transition: 0.25s ease;
+        }
 
-.socials a:hover {
-    background: var(--accent);
-    color: black;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 14px rgba(56,189,248,0.25);
-}
-</style>
+        .socials a:hover {
+            background: var(--accent);
+            color: black;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 14px rgba(56, 189, 248, 0.25);
+        }
+    </style>
 </head>
 
 <body>
 
-<header class="hero">
-<img src="images/profile_pic.jpg">
-<h1>Sagar Awasthi</h1>
-<h2 class="typing"></h2>
-<p>DevOps Engineer with AWS, Kubernetes, and CI/CD experience.</p>
+    <header class="hero">
+        <img src="images/profile_pic.jpg">
+        <h1>Sagar Awasthi</h1>
+        <h2 class="typing"></h2>
+        <p>DevOps Engineer with AWS, Kubernetes, and CI/CD experience.</p>
 
-<div class="hero-buttons">
-<a href="./resume.pdf" target="_blank">Resume</a>
-<a href="https://github.com/coder-ocean" target="_blank">GitHub</a>
-<a href="https://www.linkedin.com/in/sagar-awasthi-it-services" target="_blank">LinkedIn</a>
-</div>
-</header>
+        <div class="hero-buttons">
+            <a href="./resume.pdf" target="_blank">Resume</a>
+            <a href="https://github.com/coder-ocean" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/sagar-awasthi-it-services" target="_blank">LinkedIn</a>
+        </div>
+    </header>
 
-<!-- CERTIFICATIONS -->
-<section>
-<h2>🎓 Certifications</h2>
+    <!-- CERTIFICATIONS -->
+    <section>
+        <h2>🎓 Certifications</h2>
 
-<div class="cert-grid">
+        <div class="cert-grid">
 
-<div class="cert-card">
-<a href="https://upskill.tutedude.com/certificate/TD-SAGA-DO-2306" target="_blank">
-<img src="images/certificate_TD-SAGA-DO-2306_page-0001.jpg">
-</a>
-<div class="cert-title">⚙️ DevOps Certification<br><small>TuteDude</small></div>
-</div>
+            <div class="cert-card">
+                <a href="https://upskill.tutedude.com/certificate/TD-SAGA-DO-2306" target="_blank">
+                    <img src="images/certificate_TD-SAGA-DO-2306_page-0001.jpg">
+                </a>
+                <div class="cert-title">⚙️ DevOps Certification<br><small>TuteDude</small></div>
+            </div>
 
-<div class="cert-card">
-<img src="images/DFS-Support_Administrator Beginner -GEN AI L2_page-0001.jpg"
-onclick="openModal(this.src)">
-<div class="cert-title">🤖 Gen AI Support Administrator<br><small>HCLTech</small></div>
-</div>
+            <div class="cert-card">
+                <img src="images/DFS-Support_Administrator Beginner -GEN AI L2_page-0001.jpg"
+                    onclick="openModal(this.src)">
+                <div class="cert-title">🤖 Gen AI Support Administrator<br><small>HCLTech</small></div>
+            </div>
 
-<div class="cert-card">
-<a href="https://credsverse.com/credentials/0a33b120-c5e3-4a9a-acba-f60cab91a079" target="_blank">
-<img src="images/0a33b120-c5e3-4a9a-acba-f60cab91a079_page-0001.jpg">
-</a>
-<div class="cert-title">📜 Chaos Engineering Certification<br><small>HCLTech</small></div>
-</div>
+            <div class="cert-card">
+                <a href="https://credsverse.com/credentials/0a33b120-c5e3-4a9a-acba-f60cab91a079" target="_blank">
+                    <img src="images/0a33b120-c5e3-4a9a-acba-f60cab91a079_page-0001.jpg">
+                </a>
+                <div class="cert-title">📜 Chaos Engineering Certification<br><small>HCLTech</small></div>
+            </div>
 
-</div>
-</section>
+        </div>
+    </section>
 
-<!-- PROJECTS -->
-<section>
-<h2>🚀 Projects</h2>
+    <!-- PROJECTS -->
+    <section>
+        <h2>🚀 Projects</h2>
 
-<div class="card">
-<h3>CI/CD Pipeline</h3>
-<a href="https://github.com/coder-ocean/ares-cicd" target="_blank">View Code →</a>
-</div>
+        <div class="card">
+            <h3>CI/CD Pipeline</h3>
+            <a href="https://github.com/coder-ocean/ares-cicd" target="_blank">View Code →</a>
+        </div>
 
-<div class="card">
-<h3>Multi EC2 Deployment</h3>
-<a href="https://github.com/coder-ocean/flask-express-2ec2-app" target="_blank">View Code →</a>
-</div>
+        <div class="card">
+            <h3>Multi EC2 Deployment</h3>
+            <a href="https://github.com/coder-ocean/flask-express-2ec2-app" target="_blank">View Code →</a>
+        </div>
 
-<div class="card">
-<h3>AWS EC2 App</h3>
-<a href="https://github.com/coder-ocean/flask-express-ec2-app" target="_blank">View Code →</a>
-</div>
+        <div class="card">
+            <h3>AWS EC2 App</h3>
+            <a href="https://github.com/coder-ocean/flask-express-ec2-app" target="_blank">View Code →</a>
+        </div>
 
-<div class="card">
-<h3>Kubernetes Deployment</h3>
-<a href="https://github.com/coder-ocean/K8s-app" target="_blank">View Code →</a>
-</div>
+        <div class="card">
+            <h3>Kubernetes Deployment</h3>
+            <a href="https://github.com/coder-ocean/K8s-app" target="_blank">View Code →</a>
+        </div>
 
-</section>
+    </section>
 
-<section>
-<h2>📊 GitHub Activity</h2>
+    <section>
+        <h2>📊 GitHub Activity</h2>
 
-<div class="github-container">
-<img class="github-img" src="https://streak-stats.demolab.com?user=coder-ocean&theme=tokyonight" onerror="this.style.display='none'" />
-<img class="github-img" src="https://github-readme-activity-graph.vercel.app/graph?username=coder-ocean&theme=tokyo-night" onerror="this.style.display='none'" />
-<img class="github-img" src="https://ghchart.rshah.org/38bdf8/coder-ocean" onerror="this.style.display='none'" />
-</div>
+        <div class="github-container">
+            <img class="github-img" src="https://streak-stats.demolab.com?user=coder-ocean&theme=tokyonight"
+                onerror="this.style.display='none'" />
+            <img class="github-img"
+                src="https://github-readme-activity-graph.vercel.app/graph?username=coder-ocean&theme=tokyo-night"
+                onerror="this.style.display='none'" />
+            <img class="github-img" src="https://ghchart.rshah.org/38bdf8/coder-ocean"
+                onerror="this.style.display='none'" />
+        </div>
 
-</section>
+    </section>
 
-<section>
-<h2>📬 Contact</h2>
+    <section>
+        <h2>📬 Contact</h2>
 
-<div class="contact-container">
-<form action="https://formspree.io/f/mzdkzrzk" method="POST">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-<button type="submit">Send</button>
-</form>
-</div>
+        <div class="contact-container">
+            <form id="contact-form" action="https://formspree.io/f/mzdkzrzk" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
 
-</section>
+                <p id="form-message" style="display:none; margin-top:10px; color:#38bdf8; font-size:0.9rem;">
+                    I will get back to you within 24–48 hours.
+                </p>
+            </form>
+        </div>
 
-<section>
-<div class="socials">
-<a href="https://github.com/coder-ocean" target="_blank"><i class="fab fa-github"></i></a>
-<a href="https://www.linkedin.com/in/sagar-awasthi-it-services" target="_blank"><i class="fab fa-linkedin"></i></a>
-</div>
-</section>
+    </section>
 
-<!-- MODAL -->
-<div class="modal" id="modal">
-<span class="close-btn" onclick="closeModal()">✕</span>
-<img id="modal-img">
-</div>
+    <section>
+        <div class="socials">
+            <a href="https://github.com/coder-ocean" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sagar-awasthi-it-services" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+        </div>
+    </section>
 
-<script>
-// typing
-const roles=["DevOps Engineer","Cloud Engineer","CI/CD Specialist"];
-let i=0,j=0,del=false;
-function type(){
-let text=roles[i];
-j=del?j-1:j+1;
-document.querySelector(".typing").textContent=text.substring(0,j);
-if(!del&&j===text.length){del=true;setTimeout(type,1000);return;}
-if(del&&j===0){del=false;i=(i+1)%roles.length;}
-setTimeout(type,del?50:100);
-}
-type();
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+        <span class="close-btn" onclick="closeModal()">✕</span>
+        <img id="modal-img">
+    </div>
 
-// modal
-function openModal(src){
-document.getElementById("modal").style.display="flex";
-document.getElementById("modal-img").src=src;
-}
-function closeModal(){
-document.getElementById("modal").style.display="none";
-}
-</script>
+    <script>
+        // typing
+        const roles = ["DevOps Engineer", "Cloud Engineer", "CI/CD Specialist"];
+        let i = 0, j = 0, del = false;
+        function type() {
+            let text = roles[i];
+            j = del ? j - 1 : j + 1;
+            document.querySelector(".typing").textContent = text.substring(0, j);
+            if (!del && j === text.length) { del = true; setTimeout(type, 1000); return; }
+            if (del && j === 0) { del = false; i = (i + 1) % roles.length; }
+            setTimeout(type, del ? 50 : 100);
+        }
+        type();
+
+        // modal
+        function openModal(src) {
+            document.getElementById("modal").style.display = "flex";
+            document.getElementById("modal-img").src = src;
+        }
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+    <script>
+        // Form
+        const form = document.getElementById("contact-form");
+        const message = document.getElementById("form-message");
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const data = new FormData(form);
+
+            const response = await fetch(form.action, {
+                method: "POST",
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                form.reset(); // clear fields
+                message.style.display = "block"; // show message
+            }
+        });
+    </script>
 
 </body>
+
 </html>
