@@ -226,24 +226,37 @@
             transform: translateY(-3px);
             box-shadow: 0 6px 14px rgba(56, 189, 248, 0.25);
         }
+
+        /* LIGHT MODE */
+        .light-mode {
+            --bg: #f8fafc;
+            --card: rgba(255, 255, 255, 0.9);
+            --text: #0f172a;
+            --accent: #0ea5e9;
+        }
+
+        .light-mode body {
+            background: var(--bg);
+            color: var(--text);
+        }
     </style>
 </head>
 <div id="toast" style="
-position: fixed;
-bottom: 30px;
-right: 30px;
-background: rgba(30,41,59,0.95);
-color: #e2e8f0;
-padding: 14px 18px;
-border-radius: 8px;
-box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-font-size: 0.9rem;
-opacity: 0;
-transform: translateY(20px);
-transition: 0.4s ease;
-z-index: 9999;
-max-width: 280px;
-">
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: rgba(30,41,59,0.95);
+        color: #e2e8f0;
+        padding: 14px 18px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        font-size: 0.9rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: 0.4s ease;
+        z-index: 9999;
+        max-width: 280px;
+        ">
     ✅ Thanks for reaching out. Your message has been successfully submitted.<br>
     I will get back to you within 24–48 hours.
 </div>
@@ -261,7 +274,21 @@ max-width: 280px;
             <a href="https://github.com/coder-ocean" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/in/sagar-awasthi-it-services" target="_blank">LinkedIn</a>
         </div>
+        <button id="theme-toggle" style="
+            margin-top:15px;
+            padding:6px 12px;
+            border-radius:6px;
+            border:none;
+            background:#334155;
+            color:#e2e8f0;
+            cursor:pointer;
+            font-size:0.8rem;
+            transition:0.3s;
+            ">
+            🌙 Dark Mode
+        </button>
     </header>
+
 
     <!-- CERTIFICATIONS -->
     <section>
@@ -431,7 +458,20 @@ max-width: 280px;
             }
         });
     </script>
+    <script>
+        // Toggle Theme
+        const toggleBtn = document.getElementById("theme-toggle");
 
+        toggleBtn.addEventListener("click", () => {
+            document.documentElement.classList.toggle("light-mode");
+
+            if (document.documentElement.classList.contains("light-mode")) {
+                toggleBtn.innerText = "☀️ Light Mode";
+            } else {
+                toggleBtn.innerText = "🌙 Dark Mode";
+            }
+        });
+    </script>
 </body>
 
 </html>
