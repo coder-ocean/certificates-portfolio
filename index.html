@@ -120,7 +120,7 @@
         .modal {
             display: none;
             position: fixed;
-            z-index: 999;
+            z-index: 2000;
             inset: 0;
             background: rgba(0, 0, 0, 0.9);
             justify-content: center;
@@ -413,10 +413,18 @@
         function openModal(src) {
             document.getElementById("modal").style.display = "flex";
             document.getElementById("modal-img").src = src;
+
+            // hide theme toggle
+            document.getElementById("theme-toggle").style.display = "none";
         }
+
         function closeModal() {
             document.getElementById("modal").style.display = "none";
+
+            // show theme toggle again
+            document.getElementById("theme-toggle").style.display = "block";
         }
+    </script>
     </script>
     <script>
         // Form Submission
