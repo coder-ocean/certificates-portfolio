@@ -290,16 +290,16 @@
         }
 
         /* CLEAN PROJECT SECTION ALIGNMENT */
-        /* .projects-section {
+        .projects-wrapper {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .projects-section .card {
+        .projects-wrapper .card {
             width: 100%;
             max-width: 700px;
-        } */
+        }
     </style>
 </head>
 <div id="toast" style="
@@ -389,201 +389,205 @@
     <!-- PROJECTS -->
     <section class="projects-section">
         <h2>🚀 Projects</h2>
-        <div class="card">
-            <h3>CI/CD Pipeline</h3>
-            <p>Built automated CI/CD pipelines using GitHub Actions to streamline code integration and deployment
-                workflows.
-            </p>
-            <div class="impact">→ Reduced manual deployment effort and improved release speed</div>
-            <a href="https://github.com/coder-ocean/ares-cicd" target="_blank">View Code →</a>
-        </div>
 
-        <div class="card">
-            <h3>Multi EC2 Deployment</h3>
-            <p>Designed and deployed distributed applications across multiple AWS EC2 instances for improved
-                reliability.
-            </p>
-            <div class="impact">→ Increased system availability and fault tolerance</div>
-            <a href="https://github.com/coder-ocean/flask-express-2ec2-app" target="_blank">View Code →</a>
-        </div>
-
-        <div class="card">
-            <h3>AWS EC2 App</h3>
-            <p>Deployed a Flask-based web application on AWS EC2 with production-ready configuration.</p>
-            <div class="impact">→ Hands-on cloud deployment with real-world hosting setup</div>
-            <a href="https://github.com/coder-ocean/flask-express-ec2-app" target="_blank">View Code →</a>
-        </div>
-
-        <div class="card">
-            <h3>Kubernetes Deployment</h3>
-            <p>Containerized application and orchestrated deployment using Kubernetes for scalability.</p>
-            <div class="impact">→ Achieved scalable and resilient container deployment</div>
-            <a href="https://github.com/coder-ocean/K8s-app" target="_blank">View Code →</a>
-        </div>
-
-        <section>
-            <h2>📊 GitHub Activity</h2>
-
-            <div class="github-container">
-                <img class="github-img" src="https://streak-stats.demolab.com?user=coder-ocean&theme=tokyonight"
-                    onerror="this.style.display='none'" />
-                <img class="github-img"
-                    src="https://github-readme-activity-graph.vercel.app/graph?username=coder-ocean&theme=tokyo-night"
-                    onerror="this.style.display='none'" />
-                <img class="github-img" src="https://ghchart.rshah.org/38bdf8/coder-ocean"
-                    onerror="this.style.display='none'" />
+        <div class="projects-wrapper">
+            <div class="card">
+                <h3>CI/CD Pipeline</h3>
+                <p>Built automated CI/CD pipelines using GitHub Actions to streamline code integration and deployment
+                    workflows.
+                </p>
+                <div class="impact">→ Reduced manual deployment effort and improved release speed</div>
+                <a href="https://github.com/coder-ocean/ares-cicd" target="_blank">View Code →</a>
             </div>
 
-        </section>
-
-        <section>
-            <h2>📬 Contact</h2>
-
-            <div class="contact-container">
-                <form id="contact-form" action="https://formspree.io/f/mzdkzrzk" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-
-                    <button type="submit" id="submit-btn">
-                        <span id="btn-text">Send</span>
-                    </button>
-                </form>
+            <div class="card">
+                <h3>Multi EC2 Deployment</h3>
+                <p>Designed and deployed distributed applications across multiple AWS EC2 instances for improved
+                    reliability.
+                </p>
+                <div class="impact">→ Increased system availability and fault tolerance</div>
+                <a href="https://github.com/coder-ocean/flask-express-2ec2-app" target="_blank">View Code →</a>
             </div>
 
-        </section>
-
-        <section>
-            <div class="socials">
-                <a href="https://github.com/coder-ocean" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/sagar-awasthi-it-services" target="_blank"><i
-                        class="fab fa-linkedin"></i></a>
+            <div class="card">
+                <h3>AWS EC2 App</h3>
+                <p>Deployed a Flask-based web application on AWS EC2 with production-ready configuration.</p>
+                <div class="impact">→ Hands-on cloud deployment with real-world hosting setup</div>
+                <a href="https://github.com/coder-ocean/flask-express-ec2-app" target="_blank">View Code →</a>
             </div>
-        </section>
 
-        <!-- MODAL -->
-        <div class="modal" id="modal">
-            <span class="close-btn" onclick="closeModal()">✕</span>
-            <img id="modal-img">
+            <div class="card">
+                <h3>Kubernetes Deployment</h3>
+                <p>Containerized application and orchestrated deployment using Kubernetes for scalability.</p>
+                <div class="impact">→ Achieved scalable and resilient container deployment</div>
+                <a href="https://github.com/coder-ocean/K8s-app" target="_blank">View Code →</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>📊 GitHub Activity</h2>
+
+        <div class="github-container">
+            <img class="github-img" src="https://streak-stats.demolab.com?user=coder-ocean&theme=tokyonight"
+                onerror="this.style.display='none'" />
+            <img class="github-img"
+                src="https://github-readme-activity-graph.vercel.app/graph?username=coder-ocean&theme=tokyo-night"
+                onerror="this.style.display='none'" />
+            <img class="github-img" src="https://ghchart.rshah.org/38bdf8/coder-ocean"
+                onerror="this.style.display='none'" />
         </div>
 
-        <script>
-            // typing
-            const roles = ["DevOps Engineer", "Cloud Engineer", "CI/CD Specialist"];
-            let i = 0, j = 0, del = false;
-            function type() {
-                let text = roles[i];
-                j = del ? j - 1 : j + 1;
-                document.querySelector(".typing").textContent = text.substring(0, j);
-                if (!del && j === text.length) { del = true; setTimeout(type, 1000); return; }
-                if (del && j === 0) { del = false; i = (i + 1) % roles.length; }
-                setTimeout(type, del ? 50 : 100);
-            }
-            type();
+    </section>
 
-            // modal
-            function openModal(src) {
-                document.getElementById("modal").style.display = "flex";
-                document.getElementById("modal-img").src = src;
+    <section>
+        <h2>📬 Contact</h2>
 
-                // hide theme toggle
-                document.getElementById("theme-toggle").style.display = "none";
-            }
+        <div class="contact-container">
+            <form id="contact-form" action="https://formspree.io/f/mzdkzrzk" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
 
-            function closeModal() {
-                document.getElementById("modal").style.display = "none";
+                <button type="submit" id="submit-btn">
+                    <span id="btn-text">Send</span>
+                </button>
+            </form>
+        </div>
 
-                // show theme toggle again
-                document.getElementById("theme-toggle").style.display = "block";
-            }
-        </script>
-        </script>
-        <script>
-            // Form Submission
-            const form = document.getElementById("contact-form");
-            const btn = document.getElementById("submit-btn");
-            const btnText = document.getElementById("btn-text");
-            const toast = document.getElementById("toast");
+    </section>
 
-            form.addEventListener("submit", async function (e) {
-                e.preventDefault();
+    <section>
+        <div class="socials">
+            <a href="https://github.com/coder-ocean" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sagar-awasthi-it-services" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+        </div>
+    </section>
 
-                btn.disabled = true;
-                btnText.innerText = "Sending...";
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+        <span class="close-btn" onclick="closeModal()">✕</span>
+        <img id="modal-img">
+    </div>
 
-                const data = new FormData(form);
+    <script>
+        // typing
+        const roles = ["DevOps Engineer", "Cloud Engineer", "CI/CD Specialist"];
+        let i = 0, j = 0, del = false;
+        function type() {
+            let text = roles[i];
+            j = del ? j - 1 : j + 1;
+            document.querySelector(".typing").textContent = text.substring(0, j);
+            if (!del && j === text.length) { del = true; setTimeout(type, 1000); return; }
+            if (del && j === 0) { del = false; i = (i + 1) % roles.length; }
+            setTimeout(type, del ? 50 : 100);
+        }
+        type();
 
-                const response = await fetch(form.action, {
-                    method: "POST",
-                    body: data,
-                    headers: { 'Accept': 'application/json' }
-                });
+        // modal
+        function openModal(src) {
+            document.getElementById("modal").style.display = "flex";
+            document.getElementById("modal-img").src = src;
 
-                if (response.ok) {
-                    form.reset();
+            // hide theme toggle
+            document.getElementById("theme-toggle").style.display = "none";
+        }
 
-                    // show toast
-                    toast.style.opacity = "1";
-                    toast.style.transform = "translateY(0)";
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
 
-                    // auto hide
-                    setTimeout(() => {
-                        toast.style.opacity = "0";
-                        toast.style.transform = "translateY(20px)";
-                    }, 4000);
+            // show theme toggle again
+            document.getElementById("theme-toggle").style.display = "block";
+        }
+    </script>
+    </script>
+    <script>
+        // Form Submission
+        const form = document.getElementById("contact-form");
+        const btn = document.getElementById("submit-btn");
+        const btnText = document.getElementById("btn-text");
+        const toast = document.getElementById("toast");
 
-                    // button animation
-                    btnText.innerText = "Sent ✓";
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
 
-                    setTimeout(() => {
-                        btn.disabled = false;
-                        btnText.innerText = "Send";
-                    }, 2000);
-                }
+            btn.disabled = true;
+            btnText.innerText = "Sending...";
+
+            const data = new FormData(form);
+
+            const response = await fetch(form.action, {
+                method: "POST",
+                body: data,
+                headers: { 'Accept': 'application/json' }
             });
-        </script>
-        <script>
-            const toggleBtn = document.getElementById("theme-toggle");
 
-            // Load saved theme
-            if (localStorage.getItem("theme") === "light") {
-                document.documentElement.classList.add("light-mode");
+            if (response.ok) {
+                form.reset();
+
+                // show toast
+                toast.style.opacity = "1";
+                toast.style.transform = "translateY(0)";
+
+                // auto hide
+                setTimeout(() => {
+                    toast.style.opacity = "0";
+                    toast.style.transform = "translateY(20px)";
+                }, 4000);
+
+                // button animation
+                btnText.innerText = "Sent ✓";
+
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btnText.innerText = "Send";
+                }, 2000);
+            }
+        });
+    </script>
+    <script>
+        const toggleBtn = document.getElementById("theme-toggle");
+
+        // Load saved theme
+        if (localStorage.getItem("theme") === "light") {
+            document.documentElement.classList.add("light-mode");
+            toggleBtn.innerText = "☀️ Light";
+        }
+
+        // Toggle theme
+        toggleBtn.addEventListener("click", () => {
+            document.documentElement.classList.toggle("light-mode");
+
+            if (document.documentElement.classList.contains("light-mode")) {
+                localStorage.setItem("theme", "light");
                 toggleBtn.innerText = "☀️ Light";
+            } else {
+                localStorage.setItem("theme", "dark");
+                toggleBtn.innerText = "🌙 Dark";
             }
-
-            // Toggle theme
-            toggleBtn.addEventListener("click", () => {
-                document.documentElement.classList.toggle("light-mode");
-
-                if (document.documentElement.classList.contains("light-mode")) {
-                    localStorage.setItem("theme", "light");
-                    toggleBtn.innerText = "☀️ Light";
-                } else {
-                    localStorage.setItem("theme", "dark");
-                    toggleBtn.innerText = "🌙 Dark";
+        });
+    </script>
+    <script>
+        // Image Load Fast
+        document.querySelectorAll(".cert-card img").forEach(img => {
+            img.onload = () => img.classList.add("loaded");
+        });
+    </script>
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
                 }
             });
-        </script>
-        <script>
-            // Image Load Fast
-            document.querySelectorAll(".cert-card img").forEach(img => {
-                img.onload = () => img.classList.add("loaded");
-            });
-        </script>
-        <script>
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("show");
-                    }
-                });
-            });
+        });
 
-            document.querySelectorAll("section").forEach(sec => {
-                sec.classList.add("fade-in");
-                observer.observe(sec);
-            });
-        </script>
+        document.querySelectorAll("section").forEach(sec => {
+            sec.classList.add("fade-in");
+            observer.observe(sec);
+        });
+    </script>
 </body>
 
 </html>
