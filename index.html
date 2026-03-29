@@ -85,7 +85,22 @@
 
         .card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 12px 30px rgba(56,189,248,0.15);
+        }
+
+        .card h3 {
+            margin-bottom: 6px;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: var(--muted-text);
+        }
+
+        .impact {
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin: 6px 0;
         }
 
         /* CERTIFICATIONS */
@@ -107,7 +122,12 @@
             width: 100%;
             border-radius: 10px;
             cursor: pointer;
-            transition: 0.3s ease;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .cert-card img.loaded {
+            opacity: 1;
         }
 
         .cert-card:hover {
@@ -157,6 +177,17 @@
             font-size: 28px;
             color: white;
             cursor: pointer;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.6s ease;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* GITHUB */
@@ -320,20 +351,22 @@
 
             <div class="cert-card">
                 <a href="https://upskill.tutedude.com/certificate/TD-SAGA-DO-2306" target="_blank">
-                    <img src="images/certificate_TD-SAGA-DO-2306_page-0001.jpg">
+                    <img src="images/certificate_TD-SAGA-DO-2306_page-0001.jpg" loading="lazy" decoding="async"
+                        onclick="openModal(this.src)">
                 </a>
                 <div class="cert-title">⚙️ DevOps Certification<br><small>TuteDude</small></div>
             </div>
 
             <div class="cert-card">
-                <img src="images/DFS-Support_Administrator Beginner -GEN AI L2_page-0001.jpg"
-                    onclick="openModal(this.src)">
+                <img src="images/DFS-Support_Administrator Beginner -GEN AI L2_page-0001.jpg" loading="lazy"
+                    decoding="async" onclick="openModal(this.src)">
                 <div class="cert-title">🤖 Gen AI Support Administrator<br><small>HCLTech</small></div>
             </div>
 
             <div class="cert-card">
                 <a href="https://credsverse.com/credentials/0a33b120-c5e3-4a9a-acba-f60cab91a079" target="_blank">
-                    <img src="images/0a33b120-c5e3-4a9a-acba-f60cab91a079_page-0001.jpg">
+                    <img src="images/0a33b120-c5e3-4a9a-acba-f60cab91a079_page-0001.jpg" loading="lazy" decoding="async"
+                        onclick="openModal(this.src)">
                 </a>
                 <div class="cert-title">📜 Chaos Engineering Certification<br><small>HCLTech</small></div>
             </div>
@@ -342,30 +375,35 @@
     </section>
 
     <!-- PROJECTS -->
-    <section>
-        <h2>🚀 Projects</h2>
+    <div class="card">
+        <h3>CI/CD Pipeline</h3>
+        <p>Built automated CI/CD pipelines using GitHub Actions to streamline code integration and deployment workflows.
+        </p>
+        <div class="impact">→ Reduced manual deployment effort and improved release speed</div>
+        <a href="https://github.com/coder-ocean/ares-cicd" target="_blank">View Code →</a>
+    </div>
 
-        <div class="card">
-            <h3>CI/CD Pipeline</h3>
-            <a href="https://github.com/coder-ocean/ares-cicd" target="_blank">View Code →</a>
-        </div>
+    <div class="card">
+        <h3>Multi EC2 Deployment</h3>
+        <p>Designed and deployed distributed applications across multiple AWS EC2 instances for improved reliability.
+        </p>
+        <div class="impact">→ Increased system availability and fault tolerance</div>
+        <a href="https://github.com/coder-ocean/flask-express-2ec2-app" target="_blank">View Code →</a>
+    </div>
 
-        <div class="card">
-            <h3>Multi EC2 Deployment</h3>
-            <a href="https://github.com/coder-ocean/flask-express-2ec2-app" target="_blank">View Code →</a>
-        </div>
+    <div class="card">
+        <h3>AWS EC2 App</h3>
+        <p>Deployed a Flask-based web application on AWS EC2 with production-ready configuration.</p>
+        <div class="impact">→ Hands-on cloud deployment with real-world hosting setup</div>
+        <a href="https://github.com/coder-ocean/flask-express-ec2-app" target="_blank">View Code →</a>
+    </div>
 
-        <div class="card">
-            <h3>AWS EC2 App</h3>
-            <a href="https://github.com/coder-ocean/flask-express-ec2-app" target="_blank">View Code →</a>
-        </div>
-
-        <div class="card">
-            <h3>Kubernetes Deployment</h3>
-            <a href="https://github.com/coder-ocean/K8s-app" target="_blank">View Code →</a>
-        </div>
-
-    </section>
+    <div class="card">
+        <h3>Kubernetes Deployment</h3>
+        <p>Containerized application and orchestrated deployment using Kubernetes for scalability.</p>
+        <div class="impact">→ Achieved scalable and resilient container deployment</div>
+        <a href="https://github.com/coder-ocean/K8s-app" target="_blank">View Code →</a>
+    </div>
 
     <section>
         <h2>📊 GitHub Activity</h2>
@@ -508,6 +546,26 @@
                 localStorage.setItem("theme", "dark");
                 toggleBtn.innerText = "🌙 Dark";
             }
+        });
+    </script>
+    <script>
+        // Image Load Fast
+        document.querySelectorAll(".cert-card img").forEach(img => {
+            img.onload = () => img.classList.add("loaded");
+        });
+    </script>
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        });
+
+        document.querySelectorAll("section").forEach(sec => {
+            sec.classList.add("fade-in");
+            observer.observe(sec);
         });
     </script>
 </body>
