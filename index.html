@@ -2,240 +2,291 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sagar Awasthi | DevOps Engineer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sagar Awasthi | DevOps Engineer</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<style>
-:root {
-  --bg: #0b1120;
-  --card: rgba(30,41,59,0.6);
-  --text: #e2e8f0;
-  --accent: #38bdf8;
-}
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #e2e8f0;
+      --accent: #38bdf8;
+    }
 
-body {
-  margin: 0;
-  font-family: system-ui;
-  background: radial-gradient(circle at top, #0f172a, #020617);
-  color: var(--text);
-}
+    body {
+      margin: 0;
+      font-family: system-ui;
+      background: var(--bg);
+      color: var(--text);
+    }
 
-section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 80px 20px;
-}
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
 
-h2 {
-  border-left: 4px solid var(--accent);
-  padding-left: 10px;
-  margin-bottom: 30px;
-}
+    h2 {
+      border-left: 4px solid var(--accent);
+      padding-left: 10px;
+    }
 
-/* HERO */
-.hero {
-  padding: 120px 20px;
-  text-align: center;
-}
+    /* HERO */
+    .hero {
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #020617, #1e293b);
+    }
 
-.hero h1 {
-  font-size: 3.5rem;
-}
+    .hero-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.typing {
-  color: var(--accent);
-  font-size: 1.4rem;
-}
+    .hero-text {
+      max-width: 500px;
+    }
 
-.hero-buttons a {
-  margin: 10px;
-  padding: 12px 22px;
-  background: linear-gradient(135deg,#38bdf8,#0ea5e9);
-  border-radius: 8px;
-  color: #020617;
-  font-weight: bold;
-  text-decoration: none;
-  transition: .3s;
-}
+    .hero-text h1 {
+      font-size: 3rem;
+    }
 
-.hero-buttons a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(56,189,248,.3);
-}
+    .hero-buttons a {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+      padding: 10px 16px;
+      background: var(--accent);
+      color: black;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-/* GLASS CARD */
-.card {
-  background: var(--card);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.05);
-  padding: 25px;
-  border-radius: 16px;
-  margin-bottom: 25px;
-  transition: .3s;
-}
+    .hero-image img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+    }
 
-.card:hover {
-  transform: translateY(-8px) scale(1.02);
-}
+    /* CARDS */
+    .card {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      transition: 0.3s;
+    }
 
-/* GITHUB */
-.github img {
-  width:100%;
-  max-width:500px;
-  margin:10px;
-  border-radius:10px;
-}
+    .card:hover {
+      transform: translateY(-5px);
+    }
 
-/* CONTACT */
-.contact-form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+    .impact {
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
 
-.input-group {
-  position: relative;
-}
+    /* SKILLS */
+    .skills span {
+      display: inline-block;
+      margin: 6px;
+      padding: 6px 10px;
+      background: #334155;
+      border-radius: 6px;
+    }
 
-.input-group input,
-.input-group textarea {
-  width: 100%;
-  padding: 14px;
-  border-radius: 8px;
-  border: 1px solid #334155;
-  background: transparent;
-  color: var(--text);
-}
+    /* FORM FIX */
+    form {
+      max-width: 500px;
+      background: var(--card);
+      padding: 20px;
+      border-radius: 10px;
+    }
 
-.input-group label {
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #94a3b8;
-  transition: .25s;
-  background: var(--bg);
-  padding: 0 5px;
-}
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: none;
+      background: #334155;
+      color: white;
+      box-sizing: border-box;
+    }
 
-.input-group textarea + label {
-  top: 20px;
-  transform: none;
-}
+    form button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background: var(--accent);
+      color: black;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
 
-.input-group input:focus + label,
-.input-group input:valid + label,
-.input-group textarea:focus + label,
-.input-group textarea:valid + label {
-  top: -10px;
-  font-size: 12px;
-  color: var(--accent);
-}
+    /* ICONS (FIXED + PROFESSIONAL) */
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
 
-.btn-submit {
-  padding: 14px;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(135deg,#38bdf8,#0ea5e9);
-  color: #020617;
-  font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
+    .socials a {
+      width: 50px;
+      height: 50px;
+      background: var(--card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 22px;
+      color: var(--text);
+      transition: 0.3s;
+    }
 
-.btn-submit:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(56,189,248,.4);
-}
+    .socials a:hover {
+      background: var(--accent);
+      color: black;
+      transform: translateY(-5px) scale(1.1);
+    }
 
-/* SOCIAL */
-.icon-link {
-  margin: 10px;
-  font-size: 22px;
-  padding: 14px;
-  background: var(--card);
-  border-radius: 50%;
-  transition: .3s;
-}
-
-.icon-link:hover {
-  background: var(--accent);
-  color:#020617;
-}
-
-</style>
+    /* MOBILE */
+    @media(max-width:768px) {
+      .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="hero">
-<h1>Sagar Awasthi</h1>
-<div class="typing"><span id="typed"></span></div>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-container">
 
-<div class="hero-buttons">
-<a href="resume.pdf">Resume</a>
-<a href="https://github.com/coder-ocean">GitHub</a>
-<a href="https://www.linkedin.com/in/sagar-awasthi-it-services">LinkedIn</a>
-</div>
-</header>
+      <div class="hero-text">
+        <h1>Sagar Awasthi</h1>
+        <p>
+          DevOps Engineer specializing in AWS, Kubernetes, and CI/CD automation.
+        </p>
 
-<section>
-<h2>🚀 Projects</h2>
-<div class="card"><h3>CI/CD Pipeline</h3><p>Automation using GitHub Actions</p></div>
-<div class="card"><h3>Kubernetes Deployment</h3><p>Scalable container orchestration</p></div>
-</section>
+        <div class="hero-buttons">
+          <a href="./resume.pdf" target="_blank">Resume</a>
+          <a href="https://github.com/coder-ocean" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/sagar-awasthi-it-services" target="_blank">LinkedIn</a>
+        </div>
+      </div>
 
-<section class="github">
-<h2>📊 GitHub Activity</h2>
-<img src="https://github-readme-stats.vercel.app/api?username=coder-ocean&show_icons=true&theme=tokyonight&hide_border=true">
-<img src="https://streak-stats.demolab.com?user=coder-ocean&theme=tokyonight&hide_border=true">
-</section>
+      <div class="hero-image">
+        <img src="images/profile_pic.jpg">
+      </div>
 
-<section>
-<h2>📬 Contact</h2>
-<form class="contact-form" action="https://formspree.io/f/mzdkzrzk" method="POST">
+    </div>
+  </header>
 
-<div class="input-group">
-<input type="text" name="name" required>
-<label>Your Name</label>
-</div>
+  <!-- SKILLS -->
+  <section>
+    <h2>⚙️ Core Skills</h2>
+    <div class="skills">
+      <span>AWS</span>
+      <span>Kubernetes</span>
+      <span>Docker</span>
+      <span>CI/CD</span>
+      <span>Linux</span>
+    </div>
+  </section>
 
-<div class="input-group">
-<input type="email" name="email" required>
-<label>Your Email</label>
-</div>
+  <!-- PROJECTS -->
+  <section>
+    <h2>🚀 Selected Work</h2>
 
-<div class="input-group">
-<textarea name="message" rows="4" required></textarea>
-<label>Your Message</label>
-</div>
+    <div class="card">
+      <h3>CI/CD Pipeline</h3>
+      <p>Automated workflows using GitHub Actions.</p>
+      <div class="impact">→ Improved deployment speed</div>
+      <a href="https://github.com/coder-ocean/ares-cicd">View Code →</a>
+    </div>
 
-<button class="btn-submit">Send Message <i class="fas fa-paper-plane"></i></button>
+    <div class="card">
+      <h3>Multi EC2 Deployment</h3>
+      <p>Distributed deployment across multiple EC2 instances.</p>
+      <div class="impact">→ Improved availability</div>
+      <a href="https://github.com/coder-ocean/flask-express-2ec2-app">View Code →</a>
+    </div>
 
-</form>
-</section>
+    <div class="card">
+      <h3>AWS EC2 App</h3>
+      <p>Flask deployment on AWS EC2.</p>
+      <div class="impact">→ Real-world cloud hosting</div>
+      <a href="https://github.com/coder-ocean/flask-express-ec2-app">View Code →</a>
+    </div>
 
-<section style="text-align:center;">
-<a href="https://github.com/coder-ocean" class="icon-link"><i class="fab fa-github"></i></a>
-<a href="https://www.linkedin.com/in/sagar-awasthi-it-services" class="icon-link"><i class="fab fa-linkedin"></i></a>
-</section>
+    <div class="card">
+      <h3>Kubernetes Deployment</h3>
+      <p>Container orchestration using Kubernetes.</p>
+      <div class="impact">→ Scalable deployment</div>
+      <a href="https://github.com/coder-ocean/K8s-app">View Code →</a>
+    </div>
 
-<script>
-new Typed("#typed", {
-strings: ["DevOps Engineer","AWS & Kubernetes","CI/CD Automation","Cloud Infrastructure"],
-typeSpeed: 50,
-backSpeed: 25,
-loop: true
-});
-</script>
+  </section>
+
+  <!-- GITHUB (FIXED NO IMAGE FAIL) -->
+  <section>
+    <h2>📊 GitHub Activity</h2>
+
+    <p>
+      View my GitHub contributions and activity:
+    </p>
+
+    <a href="https://github.com/coder-ocean" target="_blank" style="color:#38bdf8; font-weight:bold;">
+      Visit GitHub Profile →
+    </a>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <h2>📬 Contact</h2>
+
+    <form action="https://formspree.io/f/YOUR_REAL_ID" method="POST">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <input type="email" name="email" placeholder="Your Email" required>
+
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send Message</button>
+
+    </form>
+
+  </section>
+
+  <!-- SOCIAL -->
+  <section>
+    <div class="socials">
+
+      <a href="https://github.com/coder-ocean" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/sagar-awasthi-it-services" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+
+    </div>
+  </section>
 
 </body>
+
 </html>
