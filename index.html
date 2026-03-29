@@ -24,14 +24,13 @@ body {
     color: var(--text);
 }
 
-/* FIX WIDTH */
+/* LAYOUT FIX */
 section {
     max-width: 900px;
     margin: auto;
     padding: 50px 20px;
 }
 
-/* HEADINGS */
 h2 {
     border-left: 4px solid var(--accent);
     padding-left: 10px;
@@ -49,7 +48,7 @@ h2 {
     height: 180px;
     border-radius: 50%;
     border: 3px solid var(--accent);
-    box-shadow: 0 0 20px var(--accent);
+    box-shadow: 0 0 20px rgba(56,189,248,0.4);
 }
 
 .typing {
@@ -67,6 +66,12 @@ h2 {
     border-radius: 6px;
     text-decoration: none;
     font-size: 0.9rem;
+    transition: 0.25s ease;
+}
+
+.hero-buttons a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(56,189,248,0.3);
 }
 
 /* CARDS */
@@ -75,9 +80,15 @@ h2 {
     padding: 16px;
     border-radius: 10px;
     margin: 15px 0;
+    transition: 0.25s ease;
 }
 
-/* GITHUB FIX */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* GITHUB */
 .github-container {
     display: flex;
     flex-direction: column;
@@ -117,6 +128,7 @@ form input, form textarea {
     box-sizing: border-box;
 }
 
+/* SUBMIT BUTTON PREMIUM */
 form button {
     width: 100%;
     padding: 10px;
@@ -124,32 +136,41 @@ form button {
     border: none;
     border-radius: 6px;
     color: black;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
 }
 
-/* SOCIAL */
+form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(56,189,248,0.35);
+}
+
+/* SOCIAL (PROFESSIONAL) */
 .socials {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 18px;
 }
 
 .socials a {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     background: var(--card);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    color: white;
-    transition: 0.3s;
+    color: var(--text);
+    font-size: 20px;
+    transition: 0.25s ease;
 }
 
 .socials a:hover {
     background: var(--accent);
     color: black;
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(56,189,248,0.25);
 }
 </style>
 </head>
