@@ -73,33 +73,32 @@ h2 {
     margin: 20px 0;
 }
 
-/* GITHUB */
-.github-live {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-}
-
-.stat-card {
-    background: rgba(30,41,59,0.7);
-    padding: 20px;
+/* GITHUB IMAGES */
+.github-img {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    display: block;
     border-radius: 10px;
-    text-align: center;
 }
 
-.stat-card h3 {
-    color: var(--accent);
+/* CONTACT FIX */
+.contact-container {
+    display: flex;
+    justify-content: center;
 }
 
-/* FORM */
 form {
+    width: 100%;
     max-width: 500px;
     background: var(--card);
     padding: 20px;
     border-radius: 10px;
+    box-sizing: border-box;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
@@ -107,6 +106,7 @@ form input, form textarea {
     border: none;
     background: #334155;
     color: white;
+    box-sizing: border-box;
 }
 
 form button {
@@ -187,26 +187,18 @@ form button {
 
 </section>
 
-<!-- GITHUB -->
+<!-- GITHUB (UPDATED) -->
 <section>
 <h2>📊 GitHub Activity</h2>
 
-<div class="github-live">
-    <div class="stat-card">
-        <h3 id="repos">--</h3>
-        <p>Repos</p>
-    </div>
+<!-- STREAK -->
+<img class="github-img" src="https://streak-stats.demolab.com?user=coder-ocean&theme=tokyonight" />
 
-    <div class="stat-card">
-        <h3 id="followers">--</h3>
-        <p>Followers</p>
-    </div>
+<!-- ACTIVITY GRAPH -->
+<img class="github-img" src="https://github-readme-activity-graph.vercel.app/graph?username=coder-ocean&theme=tokyo-night" />
 
-    <div class="stat-card">
-        <h3 id="stars">--</h3>
-        <p>Stars</p>
-    </div>
-</div>
+<!-- CONTRIBUTIONS -->
+<img class="github-img" src="https://ghchart.rshah.org/38bdf8/coder-ocean" />
 
 </section>
 
@@ -214,12 +206,14 @@ form button {
 <section>
 <h2>📬 Contact</h2>
 
+<div class="contact-container">
 <form action="https://formspree.io/f/YOUR_REAL_ID" method="POST">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
     <button type="submit">Send</button>
 </form>
+</div>
 
 </section>
 
@@ -244,18 +238,6 @@ if(del&&j===0){del=false;i=(i+1)%roles.length;}
 setTimeout(type,del?50:100);
 }
 type();
-
-// github
-async function loadGitHub(){
-let u=await fetch("https://api.github.com/users/coder-ocean").then(r=>r.json());
-document.getElementById("repos").innerText=u.public_repos;
-document.getElementById("followers").innerText=u.followers;
-
-let repos=await fetch("https://api.github.com/users/coder-ocean/repos").then(r=>r.json());
-let stars=0;repos.forEach(r=>stars+=r.stargazers_count);
-document.getElementById("stars").innerText=stars;
-}
-loadGitHub();
 </script>
 
 </body>
