@@ -11,8 +11,8 @@ https://coder-ocean.github.io/certificates-portfolio/
 
 DevOps Engineer focused on building **scalable, reliable cloud systems** using:
 
-- ☁️ AWS (EC2, IAM, S3)
-- ⚙️ CI/CD Pipelines (GitHub Actions)
+- ☁️ AWS (EC2, VPC, IAM, RDS, ECS, EKS, ECR, S3, Auto Scaling, Elastic Load Balancing (ALB/NLB), CloudFront, Route 53, CloudWatch, Lambda, SNS, and SQS.)
+- ⚙️ CI/CD Pipelines (GitHub Actions, Jenkins)
 - 🐳 Docker & Kubernetes
 - 🐧 Linux & Networking
 
